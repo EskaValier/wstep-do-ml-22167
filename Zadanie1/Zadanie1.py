@@ -110,3 +110,67 @@ for i in range(0, 5):
         pass
     pass
 table10Deviation = math.sqrt(sumAll/25)
+
+# %% macierz 5X5 z losowych liczb 0-100
+table11 = []
+for i in range(0, 5):
+    table11help = []
+    for j in range(0, 5):
+        table11help.append(randint(0,100)) 
+        pass
+    table11.append(table11help)
+    pass
+
+# %%mediana, min, max
+table11mediana = numpy.median(table11)
+table11min = numpy.min(table11)
+table11max = numpy.max(table11)
+
+# %% transpozycja
+table12 = []
+for i in range(0, 5):
+    table12help = []
+    for j in range(0, 7):
+        table12help.append(randint(0,100)) 
+        pass
+    table12.append(table12help)
+    pass
+table12transpozition = numpy.swapaxes(table12, 1, 0)
+
+# %% dodawanie macierzy
+table13a = []
+table13b = []
+for i in range(0, 5):
+    table13Ahelp = []
+    table13Bhelp = []
+    for j in range(0, 5):
+        table13Ahelp.append(randint(0,100)) 
+        table13Bhelp.append(randint(0,100)) 
+        pass
+    table13a.append(table13Ahelp)
+    table13b.append(table13Bhelp)
+    pass
+
+table13sum = numpy.add(table13a, table13b)
+
+# %% mnozenie macierzy
+table14a = []
+for i in range(0, 3):
+    table14ahelp = []
+    for j in range(0, 3):
+        table14ahelp.append(randint(0,100)) 
+        pass
+    table14a.append(table14ahelp)
+    pass
+
+table14b = []
+for i in range(0, 9):
+    table14bhelp = []
+    for j in range(0, 9):
+        table14bhelp.append(randint(0,100)) 
+        pass
+    table14b.append(table14bhelp)
+    pass
+
+table14matmul = numpy.matmul(table14a, table14b)
+table14multiply = numpy.multiply(table14a, table14b)
