@@ -164,7 +164,7 @@ for i in range(0, 3):
     pass
 
 table14b = []
-for i in range(0, 9):
+for i in range(0, 3):
     table14bhelp = []
     for j in range(0, 9):
         table14bhelp.append(randint(0,100)) 
@@ -174,3 +174,10 @@ for i in range(0, 9):
 
 table14matmul = numpy.matmul(table14a, table14b)
 table14multiply = numpy.multiply(table14a, table14b)
+
+# %% mnozenie macierzy v2
+table15a = numpy.random.randint(100, size=(3)).reshape(1,3)
+table15b = numpy.random.randint(100, size=(9)).reshape(3,3)
+
+table15matmul = numpy.matmul(table15a, table15b)
+table15multiply = numpy.multiply(table15b, table15a)
